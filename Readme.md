@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Talgat Tursynbekov](https://up.htmlacademy.ru/adaptive/16/user/973695).
-* Наставник: `Неизвестно`.
+* Наставник: Ольга Вадясова
 
 ---
 
