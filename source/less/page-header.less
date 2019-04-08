@@ -1,0 +1,42 @@
+@import "main-nav.less";
+@import "header-bottom.less";
+
+.page-header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  width: 320px;
+}
+
+.page-header__index-top {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.page-header__menu-toggle {
+  position: absolute;
+  width: 24px;
+  height: 18px;
+
+  top: 20px;
+  right: 20px;
+  border: 0;
+  background-color: transparent;
+  background-image: url("../img/icon-mobile-menu.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+}
+
+.page-header__index-bottom {
+
+}
+
+.page-header__logo {
+  margin-left: 20px;
+  margin-top: 11px;
+  flex-grow: 1;
+}
