@@ -5,13 +5,14 @@
   display: flex;
   flex-direction: column;
   position: relative;
-
 }
 
-
-.main-nav__nav-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-
+@media screen and (min-width: @tablet-width) {
+  .main-nav {
+    flex-grow: 0;
+    width: 440px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
