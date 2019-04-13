@@ -1,5 +1,3 @@
-@import "navigation.less";
-
 .main-nav {
   flex-grow: 1;
   display: flex;
@@ -7,12 +5,20 @@
   position: relative;
 }
 
-@media screen and (min-width: @tablet-width) {
+.main-nav--disabled {
+  display: none;
+}
+
+@media screen and (min-width: @tablet-viewport) {
   .main-nav {
     flex-grow: 0;
     width: 440px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .main-nav--disabled {
+    display: flex;
   }
 }
