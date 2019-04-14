@@ -1,11 +1,13 @@
-@intro-background-color: #f2f2f2;
 .intro {
   display: block;
   background-color: @intro-background-color;
-  width: @mobile-width;
+  width: @mobile-width - 22px;
+  margin: 0 auto;
   margin-bottom: 20px;
   position: relative;
   padding-top: 18px;
+  padding-left: 22px;
+
 }
 
 
@@ -45,7 +47,7 @@
 
 .intro__title {
   display: block;
-  margin-left: 90px;
+  margin-left: 68px;
   font-size: @header-size;
   text-transform: uppercase;
   font-weight: 300;
@@ -53,9 +55,8 @@
 
 .intro__text {
   font-family: arial;
-  font-size: 14px;
+  font-size: @promo-text-size;
   width: 224px;
-  margin-left: 22px;
   margin-bottom: 20px;
 }
 
@@ -63,8 +64,6 @@
   text-align: left;
   width: 240px;
   display: block;
-
-  margin-left: 22px;
   padding-top: 21px;
   padding-bottom: 22px;
   font-size: 16px;
@@ -84,3 +83,116 @@
   background-position: 0 0;
   }
 }
+
+@media screen and (min-width: @tablet-viewport) {
+  .intro {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    width: @tablet-width - 53px;
+    padding-left: 53px;
+    margin-bottom: 30px;
+  }
+
+  .intro__title {
+    margin-left: 0px;
+    font-size: @tablet-tile-size;
+  }
+
+  .intro__icon {
+    width: 200px;
+    height: 200px;
+    left: 446px;
+    right: 0px;
+    top: 92px;
+  }
+
+  .intro__icon-sitting {
+    top: 80px;
+    left: 476px;
+    height: 194px;
+    width: 140px;
+  }
+
+  .intro__icon-walking {
+    top: 135px;
+    left: 412px;
+    height: 112px;
+    width: 269px;
+  }
+
+  .intro__text {
+    font-size: @tablet-text-size;
+    width: 372px;
+  }
+
+  .intro__text--mod {
+    width: 342px;
+  }
+
+  .intro__button {
+    margin-top: 20px;
+    margin-bottom: 25px;
+    position: relative;
+    font-size: 20px;
+    border: 0;
+
+    &::after{
+    position: absolute;
+    top: 27px;
+    content: "";
+    display: inline-block;
+    width: 24px;
+    height: 11px;
+    margin-left: 23px;
+    background-image: url("../img/icon-right-arrow-long.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    }
+  }
+}
+
+@media screen and (min-width: @desktop-viewport) {
+  .intro {
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 570px - 52px;
+    padding-left: 52px;
+  }
+
+    .intro__icon {
+      top: 47px;
+      left: 52px;
+      width: 100px;
+      height: 100px;
+    }
+
+    .intro__icon-sitting {
+      top: 41px;
+      left: 66px;
+      height: 94px;
+      width: 70px;
+    }
+
+    .intro__icon-walking {
+      top: 69px;
+      left: 34px;
+      height: 56px;
+      width: 134px;
+    }
+
+    .intro__title {
+      margin-left: 161px;
+      font-size: @desktop-title-size;
+      margin-top: 80px;
+      margin-bottom: 80px;
+      font-weight: 400;
+    }
+
+    .intro__text {
+      width: 462px;
+    }
+}
+

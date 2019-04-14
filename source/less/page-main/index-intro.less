@@ -1,5 +1,29 @@
 .index-intro {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: stretch;
+
   margin-top: 22px;
   margin-left: auto;
   margin-right: auto;
 }
+
+@media screen and (min-width: @desktop-viewport) {
+  .index-intro {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  }
+  .index-intro__list {
+    display: flex;
+    width: @desktop-width;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+}
+
