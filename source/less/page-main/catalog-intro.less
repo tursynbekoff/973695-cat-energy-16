@@ -19,10 +19,20 @@
 
 @media screen and (min-width: @tablet-viewport) {
   .catalog-intro {
+    margin-top: 28px;
     border: 0;
   }
   .catalog-intro__title {
     width: @tablet-width;
+    font-size: @tablet-font * 3;
+    font-weight: 300;
+  }
+}
+
+
+@media screen and (min-width: @desktop-viewport) {
+  .catalog-intro__title {
+    width: @desktop-width;
     font-size: @tablet-font * 3;
   }
 }

@@ -8,8 +8,15 @@
   margin-right: auto;
 }
 
+@media screen and (min-width: @tablet-viewport) {
+  .index-intro {
+    margin-top: 0;
+  }
+}
+
 @media screen and (min-width: @desktop-viewport) {
   .index-intro {
+    margin-top: 80px;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -23,5 +30,4 @@
     justify-content: space-between;
     align-items: flex-start;
   }
-
 }

@@ -1,11 +1,3 @@
-.item-cell {
-  width: @mobile-viewport;
-  display: block;
-  position: relative;
-  padding-bottom: 10px;
-  border-bottom: 1px solid @footer-underline;
-}
-
 .item-cell--last {
   text-align: center;
   padding-top: 30px;
@@ -79,48 +71,68 @@
 
 @media screen and (min-width: @tablet-viewport) {
   .item-cell {
-    height: 431px;
+    box-shadow: 0px 1px 0px 0px #f3f3f3;
   }
 
   .item-cell__img-frame {
     top: auto;
-    bottom: 319px;
+    bottom: 302px;
     left: 0;
   }
 
   .item-cell__title {
     margin: auto;
-    margin-top: 165px;
+    margin-top: 163px;
+    line-height: @tablet-font;
     font-size: @tablet-font;
-    font-weight: 400;
+    font-weight: 300;
     text-align: center;
     width: 140px;
   }
 
   .item-cell__table {
     margin: auto;
-    margin-top: 26px;
+    margin-top: 17px;
     font-size: @tablet-text-size;
 
   }
 
   .item-cell__table-row {
     display: block;
-    border-bottom: 1px solid @tablet-table-color;
+    border-collapse: collapse;
   }
 
   .item-cell__name {
-    width: 190px;
+    padding-top: 7px;
+    padding-bottom: 6px;
+    width: 185px;
+    border-bottom: 1px solid @tablet-table-color;
   }
 
   .item-cell__value {
-    width: 60px;
+    padding-right: 0;
+    margin-right: 0;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    width: 62px;
+    border-bottom: 1px solid @tablet-table-color;
   }
 
   .item-cell--last {
+    width: 324px - 2px;
     height: 401px;
     background-color: white;
     border: 1px solid @footer-background;
+  }
+
+  .item-cell__button {
+    width: 249px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    font-size: 16px;
+    font-weight: 300;
+    margin-top: 31px;
+    margin-bottom: 29px;
   }
 
   .item-cell__title--show-more {
@@ -139,5 +151,25 @@
     height: 60px;
     margin-top: 54px;
   }
+}
 
+@media screen and (min-width: @desktop-viewport) {
+
+  .item-cell__name {
+    width: 110px;
+  }
+
+  .item-cell__value {
+    width: 59px;
+  }
+  .item-cell__button {
+    width: 169px;
+  }
+
+  .item-cell--last {
+    width: 245px - 2px;
+    height: 401px;
+    background-color: white;
+    border: 1px solid @footer-background;
+  }
 }
