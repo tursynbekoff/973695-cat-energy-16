@@ -6,6 +6,7 @@
   width: @mobile-viewport;
   margin: 0 auto;
 }
+
 .catalog__element {
   width: @mobile-viewport;
   display: block;
@@ -23,6 +24,7 @@
     flex-direction: row;
     flex-wrap: wrap;
   }
+
   .catalog__wraper {
     outline: 1px solid pink;
     display: flex;
@@ -33,7 +35,7 @@
   }
 
   .catalog__element {
-    border-bottom: 0px;
+    border-bottom: 0;
     display: block;
     width: 324px;
     margin-left: 60px;
@@ -46,16 +48,18 @@
   .catalog__list {
     width: @desktop-width;
   }
+
   .catalog__wraper {
     margin-left: -80px;
   }
+
   .catalog__element {
+    margin-top: 142px;
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 245px;
     margin-left: 80px;
-    padding: 0px;
-    // border: 1px solid pink;
+    padding: 0;
   }
 }

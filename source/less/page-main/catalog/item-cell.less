@@ -6,6 +6,7 @@
 .item-cell__wrap {
   margin: 0 auto;
   width: @mobile-width;
+  // text-align: center;
 }
 
 .item-cell__img-frame {
@@ -39,9 +40,7 @@
 
 .item-cell__button {
   width: @mobile-width;
-  margin: 0 auto;
-  margin-top: 30px;
-  margin-bottom: 10px;
+  margin: 30px auto 10px;
 }
 
 .item-cell__title--show-more {
@@ -71,7 +70,7 @@
 
 @media screen and (min-width: @tablet-viewport) {
   .item-cell {
-    box-shadow: 0px 1px 0px 0px #f3f3f3;
+    box-shadow: 0 1px 0 0 #f3f3f3;
   }
 
   .item-cell__img-frame {
@@ -81,8 +80,7 @@
   }
 
   .item-cell__title {
-    margin: auto;
-    margin-top: 163px;
+    margin: 163px auto auto;
     line-height: @tablet-font;
     font-size: @tablet-font;
     font-weight: 300;
@@ -91,10 +89,8 @@
   }
 
   .item-cell__table {
-    margin: auto;
-    margin-top: 17px;
+    margin: 17px auto auto;
     font-size: @tablet-text-size;
-
   }
 
   .item-cell__table-row {
@@ -119,10 +115,9 @@
   }
 
   .item-cell--last {
-    width: 324px - 2px;
-    height: 401px;
     background-color: white;
-    border: 1px solid @footer-background;
+    width: 324px;
+    outline: 1px solid @footer-background;
   }
 
   .item-cell__button {
@@ -136,25 +131,37 @@
   }
 
   .item-cell__title--show-more {
-    margin-top:  60px;
+    margin-top: 50px;
     width: 150px;
+    // flex-shrink: 1;
   }
 
   .item-cell__text {
     display: block;
+    margin: 0 auto;
     font-size: @tablet-text-size;
+    line-height: auto;
+    margin-top: 26px;
     margin-bottom: 42px;
+  }
+
+  .intem-cell--show-more {
+    width: 170px;
   }
 
   .item-cell__interactive {
     width: 60px;
     height: 60px;
-    margin-top: 54px;
+    margin-top: 24px;
+    background-image: url("../img/icon-plus.svg");
+  }
+
+  .item-cell__button--show-more {
+    margin-top: 85px;
   }
 }
 
 @media screen and (min-width: @desktop-viewport) {
-
   .item-cell__name {
     width: 110px;
   }
@@ -162,8 +169,10 @@
   .item-cell__value {
     width: 59px;
   }
+
   .item-cell__button {
     width: 169px;
+    margin-bottom: 40px;
   }
 
   .item-cell--last {

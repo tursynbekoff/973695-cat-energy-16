@@ -1,14 +1,21 @@
 .page-footer {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  justify-content: center;
-
-  align-items: stretch;
-
-  width: @mobile-viewport;
   background-color: @footer-background;
+}
+
+.page-footer__position {
+  margin: 0 auto;
+  display: flex;
+  width: @mobile-width;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .page-footer__logo {
@@ -20,7 +27,6 @@
   padding-bottom: 31px;
   border-bottom: 1px solid @footer-underline;
 }
-
 
 .page-footer__image {
   display: inline-block;
@@ -34,7 +40,6 @@
 .page-footer__social {
   border-bottom: 1px solid @footer-underline;
 }
-
 
 .page-footer__reference {
   width: @mobile-width;
@@ -56,10 +61,6 @@
 .page-footer__academy-icon {
   width: 27px;
   height: 34px;
-
-  // background-image: url("../img/htmlacademy.svg");
-  // background-repeat: no-repeat;
-  // background-position: 0% 0%;
 }
 
 .page-footer__academy-icon svg {
@@ -70,27 +71,23 @@
   fill: #666666;
 }
 
-.page-footer__position {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-
 @media screen and (min-width: @tablet-viewport) {
   .page-footer {
-    width: @tablet-viewport;
+    width: 100%;
     flex-direction: row;
     flex-wrap: wrap;
   }
 
+  .page-footer__position {
+    display: flex;
+    width: @tablet-width;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
 
   .page-footer__image {
     width: 128px;
-  }
-
-  .page-footer__info {
-    width: 100%;
   }
 
   .page-footer__logo {
@@ -117,33 +114,19 @@
 }
 
 @media screen and (min-width: @desktop-viewport) {
-  .page-footer {
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
   .page-footer__logo {
-    // align-self: flex-start;
-    border: 1px yellow solid;
+    margin: 0;
   }
 
   .page-footer__social {
-    // align-self: center;
-    border: 1px green solid;
+    margin: 0;
   }
+
   .page-footer__reference {
-    // align-self: flex-end;
-    border: 1px teal solid;
+    margin: 0;
   }
 
   .page-footer__position {
-    display: flex;
-    width: @desktop-viewport;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid black;
+    width: @desktop-width;
   }
-
 }
