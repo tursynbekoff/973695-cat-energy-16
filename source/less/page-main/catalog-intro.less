@@ -1,6 +1,6 @@
 .catalog-intro {
   display: block;
-  width: @mobile-viewport;
+  width: 100%;
   margin: 0 auto;
   margin-top: 10px;
   padding-top: 25px;
@@ -15,4 +15,28 @@
   width: @mobile-width;
   font-size: 36px;
   font-weight: 400;
+}
+
+@media screen and (min-width: @tablet-viewport) {
+  .catalog-intro {
+    margin-top: 28px;
+    border: 0;
+  }
+
+  .catalog-intro__title {
+    width: @tablet-width;
+    font-size: @tablet-font * 3;
+    font-weight: 300;
+  }
+}
+
+@media screen and (min-width: @desktop-viewport) {
+  .catalog-intro {
+    margin-top: 45px;
+  }
+
+  .catalog-intro__title {
+    width: @desktop-width;
+    font-size: @tablet-font * 3;
+  }
 }

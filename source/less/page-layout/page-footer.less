@@ -1,0 +1,132 @@
+.page-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: @footer-background;
+}
+
+.page-footer__position {
+  margin: 0 auto;
+  display: flex;
+  width: @mobile-width;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.page-footer__logo {
+  width: @mobile-width;
+  text-align: center;
+  height: 24px;
+  margin: 0 auto;
+  padding-top: 39px;
+  padding-bottom: 31px;
+  border-bottom: 1px solid @footer-underline;
+}
+
+.page-footer__image {
+  display: inline-block;
+  width: 128px;
+  height: 24px;
+  background-image: url("../img/logo-footer.svg");
+  background-repeat: no-repeat;
+  background-position: 0% 0%;
+}
+
+.page-footer__social {
+  border-bottom: 1px solid @footer-underline;
+}
+
+.page-footer__reference {
+  width: @mobile-width;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 25px;
+  padding-bottom: 15px;
+}
+
+.page-footer__academy {
+  text-decoration: none;
+  font-family: arial;
+  font-size: 16px;
+  color: @footer-text;
+}
+
+.page-footer__academy-icon {
+  width: 27px;
+  height: 34px;
+}
+
+.page-footer__academy-icon svg {
+  height: 34px;
+}
+
+.page-footer__academy-icon svg path {
+  fill: #666666;
+}
+
+@media screen and (min-width: @tablet-viewport) {
+  .page-footer {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .page-footer__position {
+    display: flex;
+    width: @tablet-width;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-footer__image {
+    width: 128px;
+  }
+
+  .page-footer__logo {
+    border-bottom: none;
+    width: 168px;
+    text-align: left;
+  }
+
+  .page-footer__social {
+    width: 168px;
+    border-bottom: none;
+    text-align: center;
+  }
+
+  .page-footer__reference {
+    width: 168px;
+    text-align: right;
+  }
+
+  .page-footer__academy-icon {
+    width: 27px;
+    height: 34px;
+  }
+}
+
+@media screen and (min-width: @desktop-viewport) {
+  .page-footer__logo {
+    margin: 0;
+  }
+
+  .page-footer__social {
+    margin: 0;
+  }
+
+  .page-footer__reference {
+    margin: 0;
+  }
+
+  .page-footer__position {
+    width: @desktop-width;
+  }
+}
