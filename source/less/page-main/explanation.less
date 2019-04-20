@@ -1,7 +1,7 @@
 .explanation {
   width: @mobile-width;
   margin: 0 auto;
-  border: 1px black solid;
+  // border: 1px black solid;
 }
 
 .explanation__title {
@@ -13,13 +13,16 @@
 
 @media screen and (min-width: @tablet-viewport) {
   .explanation {
-    width: auto;
+    width: @tablet-width;
   }
+
   .explanation__title {
+    margin-top: 10px;
     font-size: @tablet-font * 3;
   }
 
   .explanation__list {
+    margin-top: 18px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -30,5 +33,13 @@
   .explanation {
     width: @desktop-width;
     margin-top: 80px;
+  }
+
+  .explanation__title {
+    margin-top: -12px;
+  }
+
+  .explanation__list {
+    margin-top: 18px;
   }
 }

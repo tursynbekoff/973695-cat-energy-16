@@ -1,12 +1,26 @@
 .effect {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
+    background-color: @promo-button-color;
+  }
 }
 
 .effect__text {
+  margin-left: 80px;
+  margin-top: 6px;
   display: inline-block;
-  font-family: arial;
+  font-family: "Arial", sans-serif, "Sans";
   font-size: 14px;
   width: 200px;
 }
@@ -15,37 +29,60 @@
   display: none;
 }
 
-
-.effect__icon {
-  display: inline-block;
-  margin-left: 0px;
-  width: 60px;
-  height: 60px;
-  background-color: @promo-button-color;
+.effect--leaf {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 15px;
+    width: 27px;
+    height: 30px;
+    background-image: url("../img/advantage-leaf@1x.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
 }
 
-.effect__icon--leaf {
-  background-image: url("../img/advantage-leaf@1x.png");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
+.effect--bubble {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    top: 14px;
+    width: 30px;
+    height: 32px;
+    background-image: url("../img/advantage-powder@1x.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
 }
 
-.effect__icon--bubble {
-  background-image: url("../img/advantage-powder@1x.png");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
+.effect--cutlery {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 15px;
+    width: 24px;
+    height: 31px;
+    background-image: url("../img/advantage-dining@1x.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
 }
 
-.effect__icon--cutlery {
-  background-image: url("../img/advantage-dining@1x.png");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
-}
-
-.effect__icon--clock {
-  background-image: url("../img/advantage-clock@1x.png");
-  background-position: 50% 50%;
-  background-repeat: no-repeat;
+.effect--clock {
+  &::after {
+    content: "";
+    position: absolute;
+    left: 17px;
+    top: 15px;
+    width: 26px;
+    height: 31px;
+    background-image: url("../img/advantage-clock@1x.png");
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
 }
 
 @media screen and (min-width: @tablet-viewport) {
@@ -56,25 +93,75 @@
     align-items: flex-start;
     width: 324px;
     margin-bottom: 89px;
+
+    &::before {
+      content: "";
+      width: 80px;
+      height: 80px;
+    }
   }
 
-  .effect__icon {
-    width: 80px;
-    height: 80px;
+  .effect--leaf {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 17px + 10px;
+      top: 15px + 10px;
+      width: 27px;
+      height: 30px;
+    }
+  }
+
+  .effect--bubble {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 15px + 10px;
+      top: 14px + 10px;
+      width: 30px;
+      height: 32px;
+    }
+  }
+
+  .effect--cutlery {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 18px + 10px;
+      top: 15px + 10px;
+      width: 24px;
+      height: 31px;
+    }
+  }
+
+  .effect--clock {
+    &::after {
+      content: "";
+      position: absolute;
+      left: 17px + 10px;
+      top: 15px + 10px;
+      width: 26px;
+      height: 31px;
+    }
   }
 
   .effect__text {
+    margin-left: 0;
+    margin-top: 112px;
     font-size: @tablet-text-size;
+    line-height: 24px;
     width: 245px;
+    margin-bottom: 45px;
   }
 
   .effect__number {
     position: absolute;
-    top: -50px;
-    left: 125px;
+    top: -60px;
+    font-weight: 300;
+    left: 113px;
     z-index: -1;
     display: block;
-    font-size: 228px;
+    font-size: 281px;
     color: @footer-background;
   }
 }
@@ -83,5 +170,16 @@
   .effect {
     width: 245px;
   }
-}
 
+  .effect__text {
+    line-height: 24px;
+    margin-top: 112px;
+  }
+
+  .effect__number {
+    top: -60px;
+    left: 114px;
+    font-size: 281px;
+    font-weight: 300;
+  }
+}
