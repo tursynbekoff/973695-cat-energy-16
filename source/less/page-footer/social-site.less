@@ -33,7 +33,34 @@
 .social-site__element--fb {
   background-image: url("../img/icon-fb-mobile.svg");
   background-repeat: no-repeat;
-  background-position: 50% 50%;
+  background-position: 0% 50%;
 
   margin-left: 35px;
+}
+
+@media screen and (min-width: @tablet-viewport) {
+  .social-site {
+    width: 140px;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  .social-site__element {
+    width: 30px;
+    height: 28px;
+  }
+
+  .social-site__element--vk {
+    margin: 0;
+  }
+
+  .social-site__element--ig {
+    margin: 0;
+    width: 23px;
+  }
+
+  .social-site__element--fb {
+    margin: 0;
+  }
 }
