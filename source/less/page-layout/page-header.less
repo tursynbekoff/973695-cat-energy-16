@@ -11,6 +11,7 @@
 .page-header__top {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 16px;
 }
 
 .page-header__logo img {
@@ -18,7 +19,7 @@
   width: 192px;
   height: 40px;
   margin-left: 20px;
-  margin-top: 11px;
+  margin-top: 10px;
   flex-grow: 1;
 }
 
@@ -26,15 +27,38 @@
   position: absolute;
   width: 24px;
   height: 18px;
-
-  top: 20px;
+  top: 23px;
   right: 20px;
+
   border: 0;
   background-color: transparent;
   background-image: url("../img/icon-mobile-menu.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
   cursor: pointer;
+}
+
+.page-header__menu-toggle--disabled {
+  display: none;
+}
+
+.page-header__menu-toggle-close {
+  position: absolute;
+  width: 24px;
+  height: 18px;
+  top: 23px;
+  right: 20px;
+
+  border: 0;
+  background-color: transparent;
+  background-image: url("../img/icon-close.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+}
+
+.page-header__menu-toggle-close--disabled {
+  display: none;
 }
 
 @media screen and (min-width: @tablet-viewport) {
@@ -50,26 +74,30 @@
     flex-direction: row;
     justify-content: space-between;
     width: @tablet-width;
-    align-items: center;
+    align-items: flex-start;
   }
 
   .page-header__logo img {
-    // background: url("../img/logo-tablet.svg") no-repeat 0 100%;
-    width: 175px;
-    height: 59px;
+    width: 173px;
+    height: 62px;
     margin: 0;
-    margin-top: 23px;
+    margin-top: 22px;
     flex-grow: 0;
 
     align-self: flex-start;
   }
 
-  .page-header__menu-toggle {
+  .page-header__menu-toggle,
+  .page-header__menu-toggle-close {
     display: none;
   }
 
   .page-header__nav--disabled {
     display: flex;
+  }
+
+  .page-header__nav {
+    margin-top: 6px;
   }
 }
 
@@ -93,10 +121,16 @@
       width: 50%;
       height: 696px;
       z-index: -2;
+
       background-color: @index-background;
       background-image: url("../img/index-background-desktop@1x.jpg");
       background-repeat: no-repeat;
       background-position: 0 0;
+      background-size: 720px auto;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/index-background-desktop@2x.jpg");
+      }
     }
   }
 
@@ -110,10 +144,18 @@
   }
 
   .page-header__logo img {
-    width: 202px;
-    height: 59px;
-    margin: 0;
     flex-grow: 0;
-    margin-top: 54px;
+    width: 202px;
+    height: 60px;
+    margin: 0;
+    margin-top: 53px;
+
+    &:hover {
+      opacity: 0.8;
+    }
+
+    &:active {
+      opacity: 0.5;
+    }
   }
 }

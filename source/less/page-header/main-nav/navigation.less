@@ -11,7 +11,7 @@
 .navigation__link {
   display: block;
   text-align: center;
-  margin-top: 10px;
+  margin-top: 9px;
   margin-bottom: 10px;
   text-decoration: none;
   color: @black;
@@ -50,7 +50,7 @@
 
 @media screen and (min-width: @desktop-viewport) {
   .navigation {
-    margin-top: 56px;
+    margin-top: 58px;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
@@ -58,9 +58,20 @@
   }
 
   .navigation__link {
+    margin-bottom: 8px;
+
     color: @black;
     font-weight: 300;
     font-size: @tablet-font;
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.5;
+    }
+
+    &:active {
+      opacity: 0.2;
+    }
   }
 
   .navigation__link--navigation {
@@ -68,7 +79,7 @@
   }
 
   .navigation__element {
-    border: 0;
+    border-color: transparent;
   }
 
   .navigation__element--active {
