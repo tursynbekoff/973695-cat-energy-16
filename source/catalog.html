@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="utf-8">
   <title>Каталог Кэт энерджи | HTML Academy</title>
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
-
 <body>
   <header class="page-header">
     <section class="page-header__top">
@@ -20,6 +18,7 @@
         </picture>
       </a>
       <button class="page-header__menu-toggle" aria-label="Открыть меню" type="button"></button>
+      <button class="page-header__menu-toggle-close page-header__menu-toggle-close--disabled" aria-label="Открыть меню" type="button"></button>
       <nav class="page-header__nav main-nav  main-nav--disabled">
         <ul class="main-nav__nav-list navigation list-reset">
           <li class="navigation__element"><a class="navigation__link" href="index.html">Главная</a></li>
@@ -229,7 +228,7 @@
             <div class="item-cell__wrap">
               <div class="item-cell__interactive"></div>
               <h3 class="item-cell__title item-cell__title--show-more">Показать еще 100500 товаров</h3>
-              <p class="item-cell__text intem-cell--show-more">На самом деле вкусов гораздо больше!</p>
+              <p class="item-cell__text intem-cell__text--show-more">На самом деле вкусов гораздо больше!</p>
               <a class="button item-cell__button item-cell__button--show-more" href="#">Показать все</a>
             </div>
           </li>
@@ -281,29 +280,33 @@
         </li>
       </ul>
       <div class="additional-products__more-info">
-        <span class="additional-products__gift-icon"></span>
-        <p class="additional-products__gift-info">Закажите все и получите чехол для кота в подарок!</p>
+        <p class="additional-products__gift-info">Закажите все <br> и получите чехол для кота в подарок!</p>
       </div>
     </section>
   </main>
   <footer class="page-footer">
-    <section class="page-footer__info contacts">
-      <h3 class="contacts__title">приглашаем к сотрудничеству дилеров!</h3>
-      <address class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</address>
+    <section class="page-footer__info contacts contacts--catalog">
+      <div class="contacts__wraper">
+        <h3 class="contacts__title">приглашаем <br> к сотрудничеству дилеров!</h3>
+        <address class="contacts__adress">ул. Большая Конюшенная, д. 19/8<span class="contacts__space"></span> Санкт-Петербург</address>
+      </div>
       <a class="contacts__map" aria-label="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург"></a>
     </section>
-    <div class="page-footer__position">
+    <div class="page-footer__position page-footer__position--catalog">
+      <h2 class="visually-hidden">Нижнии блок сайта</h2>
       <section class="page-footer__logo">
         <h3 class="visually-hidden">Нижнии блок сайта</h3>
-        <a class="page-footer__image" href="index.html"></a>
+        <a class="page-footer__image" href="index.html">
+          <img src="img/logo-footer.svg" alt="логотип" width="131" height="26">
+        </a>
       </section>
-      <section class="page-footer__social social-site">
+      <section class="page-footer__social social-site social-site--catalog">
         <h3 class="visually-hidden">Кэт энерджи в социальных сетях</h3>
         <a class="social-site__element social-site__element--vk" href="#"></a>
         <a class="social-site__element social-site__element--ig" href="#"></a>
         <a class="social-site__element social-site__element--fb" href="#"></a>
       </section>
-      <section class="page-footer__reference">
+      <section class="page-footer__reference page-footer__reference--catalog">
         <h3 class="visually-hidden">Разработчики сайта Кэт энерджи</h3>
         <a class="page-footer__academy" href="#">HTML Academy</a>
         <a class="page-footer__academy-icon" href="#">
@@ -315,6 +318,6 @@
       </section>
     </div>
   </footer>
+  <script src="js/script.js"></script>
 </body>
-
 </html>
