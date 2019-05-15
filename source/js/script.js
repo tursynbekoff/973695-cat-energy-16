@@ -1,7 +1,8 @@
 var burgerMenuOpen = document.querySelector(".page-header__menu-toggle");
-var burgerMenuClose = document.querySelector(".page-header__menu-toggle-close");
 var mainNav = document.querySelector(".main-nav");
 
+mainNav.classList.remove("main-nav--no-js");
+burgerMenuOpen.classList.remove("page-header__menu-toggle--no-js");
 
 try {
   storage = localStorage.getItem("name");
@@ -10,18 +11,14 @@ try {
 }
 
 burgerMenuOpen.addEventListener("click", function(evt) {
+
   evt.preventDefault();
   console.log("Please do");
-  burgerMenuOpen.classList.add("page-header__menu-toggle--disabled");
-  burgerMenuClose.classList.remove("page-header__menu-toggle-close--disabled");
-
-  mainNav.classList.remove("main-nav--disabled");
-});
-
-burgerMenuClose.addEventListener("click", function(evt) {
-  evt.preventDefault();
-  burgerMenuClose.classList.add("page-header__menu-toggle-close--disabled");
-  burgerMenuOpen.classList.remove("page-header__menu-toggle--disabled");
-
-  mainNav.classList.add("main-nav--disabled");
+  if (burgerMenuOpen.classList.contains("page-header__menu-toggle--close")) {
+    burgerMenuOpen.classList.remove("page-header__menu-toggle--close");
+    mainNav.classList.add("main-nav--disabled");
+  } else {
+    burgerMenuOpen.classList.add("page-header__menu-toggle--close");
+    mainNav.classList.remove("main-nav--disabled");
+  }
 });

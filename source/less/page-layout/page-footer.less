@@ -6,6 +6,7 @@
   width: 100%;
   margin-left: auto;
   margin-right: auto;
+
   background-color: @footer-background;
 }
 
@@ -20,12 +21,17 @@
 
 .page-footer__logo {
   width: @mobile-width;
-  text-align: center;
   height: 24px;
   margin: 0 auto;
   padding-top: 40px;
   padding-bottom: 31px;
+
   border-bottom: 1px solid @footer-underline;
+  text-align: center;
+}
+
+.page-footer__logo--form {
+  padding-bottom: 32px;
 }
 
 .page-footer__image img {
@@ -63,7 +69,7 @@
 }
 
 .page-footer__academy-icon svg path {
-  fill: #666666;
+  fill: @academy-color;
 }
 
 @media screen and (min-width: @tablet-viewport) {
@@ -93,6 +99,10 @@
 
   .page-footer__position--catalog {
     margin-top: 48px;
+  }
+
+  .page-footer__position--form {
+    margin-top: 49px;
   }
 
   .page-footer__logo {
@@ -168,10 +178,18 @@
     }
   }
 
+  .page-footer__logo--form {
+    margin-top: 15px;
+  }
+
   .page-footer__social {
     position: absolute;
     left: @desktop-width/2 - 140/2px;
     margin: 0;
+  }
+
+  .social-site--form {
+    margin-top: -2px;
   }
 
   .social-site--catalog {
@@ -186,9 +204,17 @@
     margin-top: -4px;
   }
 
+  .page-footer__reference--form {
+    margin-top: 2px;
+  }
+
   .page-footer__position {
     margin-top: 54px;
     width: @desktop-width;
+  }
+
+  .page-footer__position--form {
+    margin-top: 48px;
   }
 
   .page-footer__image img {

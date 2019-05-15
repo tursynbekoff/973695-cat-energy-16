@@ -38,11 +38,7 @@
   cursor: pointer;
 }
 
-.page-header__menu-toggle--disabled {
-  display: none;
-}
-
-.page-header__menu-toggle-close {
+.page-header__menu-toggle--close {
   position: absolute;
   width: 24px;
   height: 18px;
@@ -57,7 +53,7 @@
   cursor: pointer;
 }
 
-.page-header__menu-toggle-close--disabled {
+.page-header__menu-toggle--no-js {
   display: none;
 }
 
@@ -83,12 +79,10 @@
     margin: 0;
     margin-top: 22px;
     flex-grow: 0;
-
     align-self: flex-start;
   }
 
-  .page-header__menu-toggle,
-  .page-header__menu-toggle-close {
+  .page-header__menu-toggle {
     display: none;
   }
 

@@ -3,6 +3,7 @@
   flex-direction: row;
   flex-wrap: wrap;
   width: 100%;
+
   background-color: white;
 }
 
@@ -10,28 +11,35 @@
   background-color: @footer-background;
 }
 
+.contacts__main-wraper {
+  position: relative;
+  width: @mobile-viewport;
+  height: auto;
+  margin: 0 auto;
+}
+
 .contacts__wraper {
   margin: 0 auto;
+  margin-bottom: 0;
   width: @mobile-viewport;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
-  margin-bottom: 0;
 }
 
 .contacts__title {
-  margin-left: 19px;
   margin-top: 29px;
+  margin-left: 19px;
   margin-bottom: 25px;
   width: 125px;
 
+  text-transform: uppercase;
   text-align: left;
   font-size: @mobile-footer-size;
-  line-height: 20px;
-  text-transform: uppercase;
   font-weight: 300;
+  line-height: 20px;
 }
 
 .contacts__adress {
@@ -40,10 +48,10 @@
   width: 140px;
 
   font-size: @promo-text-size;
-  line-height: 20px;
+  font-style: normal;
   font-family: "Arial", sans-serif, serif;
   text-decoration: none;
-  font-style: normal;
+  line-height: 20px;
 }
 
 
@@ -66,6 +74,14 @@
 }
 
 @media screen and (min-width: @tablet-viewport) {
+  .contacts__main-wraper {
+    position: relative;
+    width: @tablet-width;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
+  }
+
   .contacts__wraper {
     width: @tablet-width - 40px;
     padding-left: 0 20px;
@@ -78,11 +94,11 @@
     margin-bottom: 25px;
     width: 160px;
 
+    text-transform: uppercase;
     text-align: left;
     font-size: @tablet-font;
-    line-height: 25px;
-    text-transform: uppercase;
     font-weight: 300;
+    line-height: 25px;
   }
 
   .contacts__adress {
@@ -90,12 +106,12 @@
     margin-right: 22px;
     width: 160px;
 
+    font-family: "Arial", sans-serif, serif;
+    font-style: normal;
     font-size: @tablet-text-size;
     line-height: 20px;
-    font-family: "Arial", sans-serif, serif;
     text-decoration: none;
     text-align: right;
-    font-style: normal;
   }
 
   .contacts__space {
@@ -117,8 +133,16 @@
 }
 
 @media screen and (min-width: @desktop-viewport) {
-  .page-footer__info {
+  .contacts {
     position: relative;
+  }
+
+  .contacts__main-wraper {
+    position: relative;
+    width: @desktop-width;
+    height: auto;
+    margin: 0 auto;
+    display: flex;
   }
 
   .contacts__wraper {
@@ -126,8 +150,8 @@
     width: 570px;
     display: flex;
     justify-content: flex-start;
-    top: 96px;
-    left: 18%;
+    top: 95px;
+    left: 0;
     margin: 0 auto;
 
     background-color: white;
@@ -135,16 +159,16 @@
 
   .contacts__title {
     margin-left: 76px;
-    margin-right: 89px;
+    margin-right: 90px;
     margin-top: 65px;
-    margin-bottom: 55px;
+    margin-bottom: 61px;
     width: 160px;
 
+    text-transform: uppercase;
     text-align: left;
     font-size: @tablet-font;
-    line-height: 25px;
-    text-transform: uppercase;
     font-weight: 300;
+    line-height: 25px;
   }
 
   .contacts__adress {
@@ -152,19 +176,19 @@
     margin-bottom: 55px;
     width: 160px;
 
+    font-style: normal;
     font-size: @tablet-text-size;
-    line-height: 20px;
     font-family: "Arial", sans-serif, serif;
     text-decoration: none;
     text-align: left;
-    font-style: normal;
+    line-height: 20px;
   }
 
   .contacts__map {
     height: 399px;
 
     background-image: url("../img/bg-map-desktop@1x.png");
-    background-size: contain;
+    background-size: auto;
 
     @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
       background-image: url("../img/bg-map-desktop@2x.png");

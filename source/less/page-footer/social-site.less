@@ -8,16 +8,26 @@
   padding-bottom: 21px;
 }
 
+.social-site__wrapper {
+  width: 169px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-left: -32px;
+
+  text-align: center;
+}
+
 .social-site__element {
   display: inline-block;
   width: 24px;
   height: 19px;
+  margin-left: 32px;
+
   text-align: center;
 }
 
 .social-site__element--vk {
-  margin-right: 32px;
-
   background-image: url("../img/icon-vk-mobile.svg");
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -32,8 +42,6 @@
 }
 
 .social-site__element--fb {
-  margin-left: 32px;
-
   background-image: url("../img/icon-fb-mobile.svg");
   background-repeat: no-repeat;
   background-position: 25% 50%;
@@ -43,7 +51,19 @@
   .social-site {
     width: 140px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    text-align: center;
+  }
+
+  .social-site__wrapper {
+    width: 165px;
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-left: -25px;
+
     text-align: center;
   }
 
@@ -55,6 +75,7 @@
   .social-site__element--vk {
     margin: 0;
     margin-top: 1px;
+    margin-left: 25px;
 
     background-position: 50% 40%;
     background-size: 30px 16px;
@@ -63,18 +84,19 @@
   .social-site__element--ig {
     margin: 0;
     margin-top: 1px;
+    margin-left: 25px;
 
     background-size: 23px auto;
     background-position: 40% 40%;
-    // width: 23px;
   }
 
   .social-site__element--fb {
     margin: 0;
     margin-top: -1px;
+    margin-left: 25px;
 
     background-position: 0% 0%;
-    background-size: 14px 28px;
+    background-size: 14px 30px;
   }
 }
 
@@ -82,7 +104,9 @@
   .social-site {
     width: 140px;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
     text-align: center;
   }
 }

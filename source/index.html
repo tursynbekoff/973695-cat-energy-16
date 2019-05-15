@@ -20,9 +20,8 @@
           <img src="img/logo-mobile.svg" alt="логотип" width="192" height="40">
         </picture>
       </a>
-      <button class="page-header__menu-toggle" aria-label="Открыть меню" type="button"></button>
-      <button class="page-header__menu-toggle-close page-header__menu-toggle-close--disabled" aria-label="Закрыть меню" type="button"></button>
-      <nav class="page-header__nav main-nav main-nav--disabled">
+      <button class="page-header__menu-toggle page-header__menu-toggle--no-js" aria-label="Открыть меню" type="button"></button>
+      <nav class="page-header__nav main-nav main-nav--disabled main-nav--no-js">
         <ul class="main-nav__nav-list navigation list-reset">
           <li class="navigation__element navigation__element--active">
             <a class="navigation__link navigation__link--navigation">Главная</a>
@@ -98,27 +97,34 @@
         </div>
         <div class="example-story__comparison-toggle">
           <div class="example-story__comparison">
-            <picture>
-              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
-              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
-              <source media="(min-width: 320px)" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
-              <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
-              <img class="example-story__image-before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Изображение кошки">
-            </picture>
-            <picture>
-              <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
-              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
-              <source media="(min-width: 320px)" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
-              <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
-              <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
-              <img class="example-story__image-after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Изображение кошки">
-            </picture>
+            <div class="example-story__cat-overweight example-story__cat-overweight--overlay">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+                <source media="(min-width: 320px)" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
+                <img class="example-story__image-before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Изображение кошки">
+              </picture>
+            </div>
+            <div class="example-story__cat-slim example-story__cat-slim--overlay">
+              <picture>
+                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+                <source media="(min-width: 320px)" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
+                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
+                <img class="example-story__image-after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Изображение кошки">
+              </picture>
+            </div>
           </div>
           <div class="example-story__scale">
-            <label class="example-story__label">Было</label>
-            <input class="example-story__range" type="range">
-            <label class="example-story__label">Стало</label>
+            <span class="example-story__label">Было</span>
+            <div class="example-story__range">
+              <div class="example-story__range-track"></div>
+              <div class="example-story__range-thumb"></div>
+            </div>
+            <span class="example-story__label">Стало</span>
           </div>
         </div>
       </div>
@@ -126,9 +132,11 @@
   </main>
   <footer class="page-footer">
     <section class="page-footer__info contacts">
-      <div class="contacts__wraper">
-        <h3 class="contacts__title">приглашаем <br> к сотрудничеству дилеров!</h3>
-        <address class="contacts__adress">ул. Большая Конюшенная, д. 19/8 <span class="contacts__space"></span> Санкт-Петербург</address>
+      <div class="contacts__main-wraper">
+        <div class="contacts__wraper">
+          <h3 class="contacts__title">приглашаем <br> к сотрудничеству дилеров!</h3>
+          <address class="contacts__adress">ул. Большая Конюшенная, д. 19/8 <span class="contacts__space"></span> Санкт-Петербург</address>
+        </div>
       </div>
       <a class="contacts__map" aria-label="ул. Большая Конюшенная, д. 19/8 Санкт-Петербург" href="#"></a>
     </section>
@@ -142,9 +150,11 @@
       </section>
       <section class="page-footer__social page-footer__social--index social-site">
         <h3 class="visually-hidden">Кэт энерджи в социальных сетях</h3>
-        <a class="social-site__element social-site__element--vk" href="#"></a>
-        <a class="social-site__element social-site__element--ig" href="#"></a>
-        <a class="social-site__element social-site__element--fb" href="#"></a>
+        <div class="social-site__wrapper">
+          <a class="social-site__element social-site__element--vk" aria-label="cat-energy в социальной сети Вконтакте" href="#"></a>
+          <a class="social-site__element social-site__element--ig" aria-label="cat-energy в социальной сети Инстаграм" href="#"></a>
+          <a class="social-site__element social-site__element--fb" aria-label="cat-energy в социальной сети Фейсбук" href="#"></a>
+        </div>
       </section>
       <section class="page-footer__reference">
         <h3 class="visually-hidden">Разработчики сайта Кэт энерджи</h3>
