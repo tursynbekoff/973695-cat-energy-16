@@ -34,10 +34,6 @@
   padding-bottom: 32px;
 }
 
-.page-footer__image img {
-  display: inline-block;
-}
-
 .page-footer__social {
   border-bottom: 1px solid @footer-underline;
 }
@@ -68,7 +64,7 @@
   width: 34px;
 }
 
-.page-footer__academy-icon svg path {
+.page-footer__academy-image {
   fill: @academy-color;
 }
 
@@ -133,13 +129,10 @@
     border: 0;
   }
 
-  .page-footer__social--index {
-    bottom: -15px;
-  }
-
   .page-footer__reference {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-between;
     padding: 0;
     margin: 0;
@@ -147,6 +140,14 @@
     width: 164px;
 
     text-align: right;
+  }
+
+  .page-footer__reference--form {
+    margin-top: 5px;
+  }
+
+  .page-footer__reference--catalog {
+    margin-top: 5px;
   }
 
   .page-footer__academy-icon {
@@ -157,14 +158,32 @@
     height: auto;
   }
 
-  .page-footer__academy-icon svg {
+  .page-footer__academy-image {
     display: block;
     width: 40px;
-    height: auto;
+    height: 40px;
   }
 }
 
 @media screen and (min-width: @desktop-viewport) {
+  .page-footer__position {
+    width: @desktop-width;
+    align-items: flex-start;
+  }
+
+  .page-footer__position--index {
+    padding: 0;
+    margin-top: 54px;
+  }
+
+  .page-footer__position--catalog {
+    margin-top: 54px;
+  }
+
+  .page-footer__position--form {
+    margin-top: 48px;
+  }
+
   .page-footer__logo {
     margin: 0;
     margin-top: 9px;
@@ -185,41 +204,43 @@
   .page-footer__social {
     position: absolute;
     left: @desktop-width/2 - 140/2px;
-    margin: 0;
-  }
-
-  .social-site--form {
-    margin-top: -2px;
-  }
-
-  .social-site--catalog {
-    bottom: -9px;
   }
 
   .page-footer__reference {
-    margin: 0;
+    margin-top: 1px;
+
+    &:active {
+      opacity: 0.5;
+    }
+
+    &:hover ~ .page-footer__academy-icon .page-footer__academy-image {
+      fill: @promo-button-color;
+    }
   }
 
   .page-footer__reference--catalog {
-    margin-top: -4px;
+    margin-top: 1px;
   }
 
   .page-footer__reference--form {
-    margin-top: 2px;
-  }
-
-  .page-footer__position {
-    margin-top: 54px;
-    width: @desktop-width;
-  }
-
-  .page-footer__position--form {
-    margin-top: 48px;
+    margin-top: 7px;
   }
 
   .page-footer__image img {
     margin-left: 0;
     width: 129px;
     height: 38px;
+  }
+
+  .page-footer__academy-image {
+    fill: @academy-color;
+
+    &:hover {
+      fill: @promo-button-color;
+    }
+  }
+
+  .page-footer__academy:hover ~ .page-footer__academy-icon .page-footer__academy-image {
+    fill: @promo-button-color;
   }
 }
