@@ -2,8 +2,8 @@
 <html lang="ru">
 <head>
   <meta charset="utf-8">
-  <title>Каталог Кэт энерджи | HTML Academy</title>
-  <!-- <link rel="stylesheet" href="css/normalize.css"> -->
+  <title>Форма Кэт энерджи | HTML Academy</title>
+  <metha name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -14,20 +14,27 @@
         <picture>
           <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
-          <img src="img/logo-mobile.svg"  alt="логотип" width="192" height="40">
+          <img src="img/logo-mobile.svg" alt="логотип" width="192" height="40">
         </picture>
       </a>
-      <button class="page-header__menu-toggle" aria-label="Открыть меню" type="button"></button>
-      <nav class="page-header__nav main-nav  main-nav--disabled">
+      <button class="page-header__menu-toggle page-header__menu-toggle--no-js" aria-label="Открыть меню" type="button"></button>
+      <nav class="page-header__nav main-nav  main-nav--disabled main-nav--no-js">
         <ul class="main-nav__nav-list navigation list-reset">
-          <li class="navigation__element"><a class="navigation__link" href="index.html">Главная</a></li>
-          <li class="navigation__element"><a class="navigation__link" href="catalog.html">Каталог продукции</a></li>
-          <li class="navigation__element navigation__element--active"><a class="navigation__link">Подбор программы</a></li>
+          <li class="navigation__element">
+            <a class="navigation__link" href="index.html">Главная</a>
+          </li>
+          <li class="navigation__element">
+            <a class="navigation__link" href="catalog.html">Каталог продукции</a>
+          </li>
+          <li class="navigation__element navigation__element--active">
+            <a class="navigation__link">Подбор программы</a>
+          </li>
         </ul>
       </nav>
     </section>
   </header>
   <main class="page-main">
+    <form method="post" action="https://echo.htmlacademy.ru">
     <section class="page-main__form-intro form-intro">
       <div class="form-intro__wrapper">
         <h2 class="form-intro__title">Подбор программы</h2>
@@ -35,33 +42,30 @@
       </div>
       <div class="form-intro__input-wrapper">
         <div class="form-intro__input-element">
-          <label class="form-intro__label">Имя:*</label>
-          <input class="form-intro__text-input" type="text" placeholder="Барсик">
+          <label class="form-intro__label" for="name">Имя:*</label>
+          <input class="form-intro__text-input" id="name" type="text" placeholder="Барсик">
         </div>
         <div class="form-intro__input-element">
-          <label class="form-intro__label">Вес (кг):*</label>
-          <input class="form-intro__text-input form-intro__text-input--weight" type="text" placeholder="7">
+          <label class="form-intro__label" for="weight">Вес (кг):*</label>
+          <input class="form-intro__text-input form-intro__text-input--weight" id="weight" type="text" placeholder="7">
         </div>
         <div class="form-intro__input-element">
-          <label class="form-intro__label">Возраст (лет):</label>
-          <input class="form-intro__text-input form-intro__text-input--age" type="text" placeholder="7">
+          <label class="form-intro__label" for="age">Возраст (лет):</label>
+          <input class="form-intro__text-input form-intro__text-input--age" id="age" type="text" placeholder="7">
         </div>
       </div>
       <div class="form-intro__radio-wrapper">
         <div class="form-intro__radio-element">
-          <input class="form-intro__radio" type="radio" value="Похудение" checked>
-          <span class="form-intro__radio-checkmark"></span>
-          <span class="form-intro__radio-text">Похудение</span>
+          <input class="form-intro__radio" id="diet" type="radio" value="Похудение" checked>
+          <label class="form-intro__radio-text" for="diet">Похудение</label>
         </div>
         <div class="form-intro__radio-element">
-          <input class="form-intro__radio" type="radio" value="Набор массы">
-          <span class="form-intro__radio-checkmark"></span>
-          <span class="form-intro__radio-text">Набор массы</span>
+          <input class="form-intro__radio" id="nutrition" type="radio" value="Набор массы">
+          <label class="form-intro__radio-text" for="nutrition">Набор массы</label>
         </div>
         <div class="form-intro__radio-element">
-          <input class="form-intro__radio" type="radio" value="Не знаю (Нужен ваш совет)">
-          <span class="form-intro__radio-checkmark"></span>
-          <span class="form-intro__radio-text">Не знаю (Нужен ваш совет)</span>
+          <input class="form-intro__radio" id="recommendation" type="radio" value="Не знаю (Нужен ваш совет)">
+          <label class="form-intro__radio-text" for="recommendation">Не знаю (Нужен ваш совет)</label>
         </div>
       </div>
     </section>
@@ -69,12 +73,12 @@
       <h3 class="form-info__title form-info__title--contacts">Контактные данные (владельца кота)</h3>
       <div class="form-info__input-wrapper">
         <div class="form-info__input-element">
-          <label class="form-info__label">E-mail:*</label>
-          <input class="form-info__text-input form-info__text-input--email" type="text" placeholder="kuklachev@gmail.com">
+          <label class="form-info__label" for="email">E-mail:*</label>
+          <input class="form-info__text-input form-info__text-input--email" id="email" type="text" placeholder="kuklachev@gmail.com">
         </div>
         <div class="form-info__input-element">
-          <label class="form-info__label form-info__label--phone">Телефон:*</label>
-          <input class="form-info__text-input form-info__text-input--phone" type="text" placeholder="8 (960) 900-60-90">
+          <label class="form-info__label form-info__label--phone" for="phone">Телефон:*</label>
+          <input class="form-info__text-input form-info__text-input--phone" id="phone" type="text" placeholder="8 (960) 900-60-90">
         </div>
       </div>
       <h3 class="form-info__title form-info__title--coments">Комментарий</h3>
@@ -82,29 +86,26 @@
       <h3 class="form-info__title form-info__title--additional">Дополнительно</h3>
       <div class="form-info__checkbox-wrapper">
         <div class="form-info__checkbox-element">
-          <input class="form-info__checkbox" type="checkbox" checked value="Сахарозаменитель">
-          <span class="form-info__checkbox-checkmark"></span>
-          <span class="form-info__checkbox-text">Сахарозаменитель</span>
+          <input class="form-info__checkbox" id="sugar" type="checkbox" checked value="Сахарозаменитель">
+          <label class="form-info__checkbox-text" for="sugar">Сахарозаменитель</label>
         </div>
         <div class="form-info__checkbox-element">
-          <input class="form-info__checkbox" type="checkbox" value="Питьевая вода">
-          <span class="form-info__checkbox-checkmark"></span>
-          <span class="form-info__checkbox-text">Питьевая вода</span>
+          <input class="form-info__checkbox" id="water" type="checkbox" value="Питьевая вода">
+          <label class="form-info__checkbox-text" for="water">Питьевая вода</label>
         </div>
         <div class="form-info__checkbox-element">
-          <input class="form-info__checkbox" type="checkbox" value="Молоко">
-          <span class="form-info__checkbox-checkmark"></span>
-          <span class="form-info__checkbox-text">Молоко</span>
+          <input class="form-info__checkbox" id="milk" type="checkbox" value="Молоко">
+          <label class="form-info__checkbox-text" for="milk">Молоко</label>
         </div>
         <div class="form-info__checkbox-element">
-          <input class="form-info__checkbox" type="checkbox" value="Витамины">
-          <span class="form-info__checkbox-checkmark"></span>
-          <span class="form-info__checkbox-text">Витамины</span>
+          <input class="form-info__checkbox" id="vitamins" type="checkbox" value="Витамины">
+          <label class="form-info__checkbox-text" for="vitamins">Витамины</label>
         </div>
       </div>
       <button class="form-info__button button" type="submit">Отправить заявку</button>
       <div class="form-info__notification">* — Обязательные поля</div>
     </section>
+  </form>
   </main>
   <footer class="page-footer">
     <section class="page-footer__info contacts contacts--catalog">
@@ -119,27 +120,30 @@
     <div class="page-footer__position page-footer__position--form">
       <h2 class="visually-hidden">Нижнии блок сайта</h2>
       <section class="page-footer__logo page-footer__logo--form">
-        <h3 class="visually-hidden">Нижнии блок сайта</h3>
-        <a class="page-footer__image" href="index.html">
-          <img src="img/logo-footer.svg" alt="логотип" width="131" height="26">
+        <h3 class="visually-hidden">Логотип Кэт энерджи</h3>
+        <a class="page-footer__image" aria-label="переход на главную страницу" href="index.html">
+          <img src="img/logo-footer.svg" alt="логотип" width="132" height="27">
         </a>
       </section>
       <section class="page-footer__social social-site social-site--form">
         <h3 class="visually-hidden">Кэт энерджи в социальных сетях</h3>
         <div class="social-site__wrapper">
-          <a class="social-site__element social-site__element--vk" aria-label="cat-energy в социальной сети Вконтакте" href="#"></a>
-          <a class="social-site__element social-site__element--ig" aria-label="cat-energy в социальной сети Инстаграм" href="#"></a>
-          <a class="social-site__element social-site__element--fb" aria-label="cat-energy в социальной сети Фейсбук" href="#"></a>
+          <a class="social-site__element " aria-label="cat-energy в социальной сети Вконтакте" href="#">
+            <svg class="social-site__vk" width="22" height="12"><use xlink:href="img/sprite.svg#icon-vk-mobile"></use></svg>
+          </a>
+          <a class="social-site__element" aria-label="cat-energy в социальной сети Инстаграм" href="#">
+            <svg class="social-site__ig" width="16" height="17"><use xlink:href="img/sprite.svg#icon-insta-mobile"></use></svg>
+          </a>
+          <a class="social-site__element" aria-label="cat-energy в социальной сети Фейсбук" href="#">
+            <svg class="social-site__fb" width="10" height="19"><use xlink:href="img/sprite.svg#icon-fb-mobile"></use></svg>
+          </a>
         </div>
       </section>
       <section class="page-footer__reference page-footer__reference--form">
         <h3 class="visually-hidden">Разработчики сайта Кэт энерджи</h3>
         <a class="page-footer__academy" href="#">HTML Academy</a>
         <a class="page-footer__academy-icon" href="#">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60" width="27" height="34">
-            <path fill="#2E368F"
-              d="M30.2 5h-.2l-19.7 2.1v36.2l19.7 11.7 19.7-11.7v-36.2l-19.5-2.1zm17 36.8l-17.2 10.2-17.2-10.2v-14.8l17.1 10.2v1.8l-11.7-7v1.8l11.8 7.1v1.9l-11.8-7v1.8l11.8 7 11.9-7.1v-7.6l5.3-3.2v15.1zm-.1-17l-4.7 2.8-2.2 1.3-10.3-6.1v1.8l8.8 5.3h-.1l-.2.1-1.3.7-7.3-4.3v1.8l5.8 3.4-1.4.9-4.3-2.6v1.8l2.9 1.7-2.9 1.7-17-10.1 17-10.2 17.2 10zm.1-1.8l-17.3-10.2-17.1 10.2v-13.6l17.2-1.8 17.2 1.8v13.6z" />
-          </svg>
+          <svg class="page-footer__academy-image" width="41" height="40"><use xlink:href="img/sprite.svg#icon-htmlacademy"></use></svg>
         </a>
       </section>
     </div>
