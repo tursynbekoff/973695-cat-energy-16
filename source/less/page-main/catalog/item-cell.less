@@ -18,18 +18,26 @@
 }
 
 .item-cell__img-frame {
+  display: block;
   position: absolute;
   top: 0;
   left: 19px;
+
+  text-decoration: none;
 }
 
 .item-cell__title {
+  display: block;
   width: 80px;
+  margin-top: 16px;
+  margin-bottom: 16px;
   margin-left: 144px;
 
+  text-decoration: none;
   font-size: 16px;
   font-weight: 300;
   text-transform: uppercase;
+  color: @title-color;
   line-height: 20px;
 }
 
@@ -86,9 +94,17 @@
 }
 
 .item-cell__button--show-more {
+
+  display: block;
+  padding-top: 11px;
   padding-left: 0;
+  padding-bottom: 11px;
+  margin: 21px auto 24px;
   width: @mobile-width;
 
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 300;
   background-color: @footer-background;
   color: @black;
   text-align: center;
@@ -210,8 +226,14 @@
 
   .item-cell__button--show-more {
     width: 249px;
-    padding-left: 0;
+    padding-top: 11px;
+    padding-bottom: 11px;
+    margin-left: 20px;
+    margin-top: 31px;
     margin-bottom: 38px;
+
+    font-size: 16px;
+    font-weight: 300;
   }
 }
 
@@ -295,6 +317,8 @@
   .item-cell__button--show-more {
     width: 170px;
     padding-left: 0;
+    margin-left: 38px;
+    margin-top: 31px;
     margin-bottom: 39px;
 
     &:hover {
