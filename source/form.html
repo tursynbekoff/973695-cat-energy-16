@@ -3,7 +3,10 @@
 <head>
   <meta charset="utf-8">
   <title>Форма Кэт энерджи | HTML Academy</title>
-  <metha name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
+  <link rel="preload" href="fonts/oswaldregular.woff" as="font">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -75,10 +78,12 @@
         <div class="form-info__input-element">
           <label class="form-info__label" for="email">E-mail:*</label>
           <input class="form-info__text-input form-info__text-input--email" id="email" type="text" placeholder="kuklachev@gmail.com">
+          <svg class="form-info__text-input-email-icon" width="17" height="13"><use xlink:href="img/sprite.svg#icon-mail"></use></svg>
         </div>
         <div class="form-info__input-element">
           <label class="form-info__label form-info__label--phone" for="phone">Телефон:*</label>
           <input class="form-info__text-input form-info__text-input--phone" id="phone" type="text" placeholder="8 (960) 900-60-90">
+          <svg class="form-info__text-input-phone-icon" width="20" height="20"><use xlink:href="img/sprite.svg#icon-phone"></use></svg>
         </div>
       </div>
       <h3 class="form-info__title form-info__title--coments">Комментарий</h3>
@@ -141,13 +146,14 @@
       </section>
       <section class="page-footer__reference page-footer__reference--form">
         <h3 class="visually-hidden">Разработчики сайта Кэт энерджи</h3>
-        <a class="page-footer__academy" href="#">HTML Academy</a>
-        <a class="page-footer__academy-icon" href="#">
+        <a class="page-footer__academy" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="page-footer__academy-icon" href="https://htmlacademy.ru/intensive/adaptive">
           <svg class="page-footer__academy-image" width="41" height="40"><use xlink:href="img/sprite.svg#icon-htmlacademy"></use></svg>
         </a>
       </section>
     </div>
   </footer>
   <script src="js/script.js"></script>
+  <script src="js/picturefill.min.js"></script>
 </body>
 </html>

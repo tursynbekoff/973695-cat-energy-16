@@ -56,6 +56,7 @@
 }
 
 .form-info__input-element {
+  position: relative;
   margin-bottom: 14px;
   display: flex;
   flex-wrap: wrap;
@@ -93,20 +94,26 @@
 
 .form-info__text-input--email {
   background-color: transparent;
-  background-image: url("../img/icon-mail.svg");
-  background-size: 17px 13px;
-  background-repeat: no-repeat;
-  background-position: 92.3% 52%;
 }
 
 .form-info__text-input--phone {
   margin-left: 11px;
 
   background-color: transparent;
-  background-image: url("../img/icon-phone.svg");
-  background-size: 20px 20px;
-  background-repeat: no-repeat;
-  background-position: 93.3% 55%;
+}
+
+.form-info__text-input-email-icon {
+  position: absolute;
+  right: 36px;
+  top: 16px;
+  fill: @icon-color;
+}
+
+.form-info__text-input-phone-icon {
+  position: absolute;
+  right: 33px;
+  bottom: 12px;
+  fill: @icon-color;
 }
 
 .form-info__textarea {
@@ -142,7 +149,6 @@
 }
 
 .form-info__checkbox {
-  // display: none;
   position: absolute;
   height: 0;
   width: 0;
@@ -334,22 +340,22 @@
     }
   }
 
-  .form-info__text-input--email {
-    background-color: transparent;
-    background-image: url("../img/icon-mail.svg");
-    background-size: 17px 13px;
-    background-repeat: no-repeat;
-    background-position: 96.3% 52%;
-  }
-
   .form-info__text-input--phone {
     margin-left: 16px;
+  }
 
-    background-color: transparent;
-    background-image: url("../img/icon-phone.svg");
-    background-size: 20px 20px;
-    background-repeat: no-repeat;
-    background-position: 96.6% 54%;
+  .form-info__text-input-email-icon {
+    position: absolute;
+    right: 86px;
+    top: 20px;
+    fill: @icon-color;
+  }
+
+  .form-info__text-input-phone-icon {
+    position: absolute;
+    right: 83px;
+    bottom: 15px;
+    fill: @icon-color;
   }
 
   .form-info__textarea {
@@ -388,23 +394,6 @@
     padding-bottom: 9px;
     padding-top: 9px;
   }
-
-  // .form-info__checkbox-text {
-  //   margin-left: 70px;
-  //
-  //   text-transform: uppercase;
-  //   font-size: @tablet-font;
-  //   font-weight: 300;
-  // }
-
-  // .form-info__checkbox {
-  //   position: absolute;
-  //   height: 0;
-  //   width: 0;
-  //
-  //   opacity: 0;
-  //   cursor: pointer;
-  // }
 
   .form-info__checkbox-text {
     margin-left: 70px;
@@ -602,56 +591,51 @@
       border: 1px solid @form-radio-hover;
     }
 
-    &:active {
+    &:active,
+    &:focus {
       border-color: @form-border-active;
       outline-color: @form-border-active;
-    }
-
-    &-error {
-      border-color: @form-border-error;
     }
   }
 
-  .form-info__text-input--email {
-    background-color: transparent;
-    background-image: url("../img/icon-mail.svg");
-    background-size: 17px 13px;
-    background-repeat: no-repeat;
-    background-position: 96% 52%;
+  .form-info__text-input--error {
+    border-color: @form-border-error;
 
+    &:hover,
     &:active,
     &:focus {
-      background-image: url("../img/icon-mail-active.svg");
-      border-color: @form-border-active;
-      outline-color: @form-border-active;
-    }
-
-    &-error {
-      background-image: url("../img/icon-mail-error.svg");
       border-color: @form-border-error;
+      outline-color: @form-border-error;
     }
+  }
+
+  .form-info__text-input:active + svg,
+  .form-info__text-input:focus + svg {
+    fill: @promo-button-color;
+  }
+
+  .form-info__text-input--error + svg,
+  .form-info__text-input--error:active + svg,
+  .form-info__text-input--error:focus + svg {
+    fill: @form-border-error;
   }
 
   .form-info__text-input--phone {
     margin-left: 16px;
+  }
 
-    background-color: transparent;
-    background-image: url("../img/icon-phone.svg");
-    background-size: 20px 20px;
-    background-repeat: no-repeat;
-    background-position: 96.2% 54%;
+  .form-info__text-input-email-icon {
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    fill: @icon-color;
+  }
 
-    &:active,
-    &:focus {
-      background-image: url("../img/icon-phone-active.svg");
-      border-color: @form-border-active;
-      outline-color: @form-border-active;
-    }
-
-    &--error {
-      background-image: url("../img/icon-phone-error.svg");
-      border-color: @form-border-error;
-    }
+  .form-info__text-input-phone-icon {
+    position: absolute;
+    right: 38px;
+    bottom: 15px;
+    fill: @icon-color;
   }
 
   .form-info__textarea {

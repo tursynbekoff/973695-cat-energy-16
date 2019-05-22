@@ -3,7 +3,9 @@
 <head>
   <meta charset="utf-8">
   <title>Кэт энерджи | HTML Academy</title>
-  <metha name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="preload" href="fonts/oswaldmedium.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
@@ -45,7 +47,7 @@
         <li class="index-intro__element intro intro--slim">
           <h2 class="intro__title">Похудение</h2>
           <p class="intro__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a class="intro__button"href="catalog.html">Каталог Slim</a>
+          <a class="intro__button" href="catalog.html">Каталог Slim</a>
         </li>
         <li class="index-intro__element intro intro--pro">
           <h2 class="intro__title">Набор массы</h2>
@@ -96,19 +98,19 @@
           <div class="example-story__comparison">
             <div class="example-story__cat-overweight example-story__cat-overweight--overlay">
               <picture>
-                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
-                <source media="(min-width: 768px)" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
-                <source media="(min-width: 320px)" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
-                <source media="(min-width: 1300px)" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
+                <source media="(min-width: 1300px)" type="image/webp" srcset="img/before-desktop@1x.webp 1x, img/before-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)" type="image/webp" srcset="img/before-tablet@1x.webp 1x, img/before-tablet@2x.webp 2x">
+                <source media="(min-width: 320px)" type="image/webp" srcset="img/before-mobile@1x.webp 1x, img/before-mobile@2x.webp 2x">
+                <source media="(min-width: 1300px)" type="image/webp" srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x">
                 <img class="example-story__image-before" src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Изображение кошки">
               </picture>
             </div>
             <div class="example-story__cat-slim example-story__cat-slim--overlay">
               <picture>
-                <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
-                <source media="(min-width: 768px)" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
-                <source media="(min-width: 320px)" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
+                <source media="(min-width: 1300px)" type="image/webp" srcset="img/after-desktop@1x.webp 1x, img/after-desktop@2x.webp 2x">
+                <source media="(min-width: 768px)" type="image/webp" srcset="img/after-tablet@1x.webp 1x, img/after-tablet@2x.webp 2x">
+                <source media="(min-width: 320px)" type="image/webp" srcset="img/after-mobile@1x.webp 1x, img/after-mobile@2x.webp 2x">
                 <source media="(min-width: 1300px)" srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x">
                 <source media="(min-width: 768px)" srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x">
                 <img class="example-story__image-after" src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Изображение кошки">
@@ -161,13 +163,14 @@
       </section>
       <section class="page-footer__reference">
         <h3 class="visually-hidden">Разработчики сайта Кэт энерджи</h3>
-        <a class="page-footer__academy" href="#">HTML Academy</a>
-        <a class="page-footer__academy-icon" href="#">
+        <a class="page-footer__academy" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy</a>
+        <a class="page-footer__academy-icon" href="https://htmlacademy.ru/intensive/adaptive">
           <svg class="page-footer__academy-image" width="41" height="40"><use xlink:href="img/sprite.svg#icon-htmlacademy"></use></svg>
         </a>
       </section>
     </div>
   </footer>
   <script src="js/script.js"></script>
+  <script src="js/picturefill.min.js"></script>
 </body>
 </html>
