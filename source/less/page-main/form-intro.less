@@ -52,7 +52,7 @@
 }
 
 .form-intro__text-input {
-  width: 155px;
+  width: 150px;
   margin-left: 14px;
   padding-top: 13px;
   padding-bottom: 12px;
@@ -67,6 +67,20 @@
     font-size: @footer-text;
     font-weight: 300;
   }
+}
+
+.form-intro__text-input::-webkit-input-placeholder {
+  color: black;
+  text-transform: uppercase;
+  font-size: @footer-text;
+  font-weight: 300;
+}
+
+.form-intro__text-input::-ms-input-placeholder {
+  color: black;
+  text-transform: uppercase;
+  font-size: @footer-text;
+  font-weight: 300;
 }
 
 .form-intro__text-input--weight {
@@ -212,6 +226,14 @@
       font-size: @tablet-font;
       font-weight: 300;
     }
+  }
+
+  .form-intro__text-input::-webkit-input-placeholder {
+    font-size: @tablet-font;
+  }
+
+  .form-intro__text-input::-ms-input-placeholder {
+    font-size: @tablet-font;
   }
 
   .form-intro__text-input--weight {
